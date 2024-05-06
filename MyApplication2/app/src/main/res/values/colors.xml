@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_white">#e8ebe9</color>
+    <color name="light">#f5f5f5</color>
+    <color name="blue">#5c7cab</color>
+    <color name="background">#FEF4FE</color>
+    <color name="hint_color">#787878</color>
+    <color name="listBackground">#FFF3F5F8</color>
+    <color name="swipe_delete">#f24b53</color>
+    <color name="swipe_edit">#68ed68</color>
+    <color name="black_with_alpha80">#80000000</color>
+</resources>

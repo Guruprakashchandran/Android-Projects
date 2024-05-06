@@ -1,0 +1,23 @@
+CREATE TABLE ToDoList (
+
+    no INTEGER PRIMARY KEY AUTOINCREMENT,
+    task TEXT NOT NULL,
+    status TEXT NOT NULL,
+    category TEXT NOT NULL,
+   FOREIGN KEY (category) REFERENCES ToDoCategory(category)
+);
+
+getAllToDoList:
+SELECT * FROM ToDoList;
+
+updateToDoListItemByStatus:
+UPDATE ToDoList SET status = :status WHERE no = :no;
+
+deleteToDoListItemByNo:
+DELETE FROM ToDoList WHERE no = :no;
+
+insertTask:
+INSERT INTO ToDoList(task,status,category) VALUES (?,?,?);
+
+getToDosBasedOnCategory:
+SELECT * FROM ToDoList WHERE category = :category;

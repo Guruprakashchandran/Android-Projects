@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    tools:context=".view.EmployeeListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_content_list"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emp_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all"
+            android:fontFamily="@font/winderfont"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.511" />
+
+        <ImageView
+            android:id="@+id/plus_icon"
+            android:layout_width="27dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/plus_button"
+            android:src="@drawable/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toEndOf="@+id/emp_list"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/filterImage"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:src="@drawable/filter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.843"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
+
+    <!--    <view class="androidx.appcompat.app.AlertController$RecycleListView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--       />-->
+
+<!--<com.google.android.material.textfield.TextInputLayout-->
+<!--android:id="@+id/dropDownItem"-->
+<!--style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--android:layout_width="143dp"-->
+<!--android:layout_height="64dp"-->
+<!--android:hint="@string/salaryContent"-->
+<!--app:layout_constraintBottom_toBottomOf="parent"-->
+<!--app:layout_constraintEnd_toStartOf="@+id/plus_icon"-->
+<!--app:layout_constraintHorizontal_bias="0.512"-->
+<!--app:layout_constraintStart_toEndOf="@+id/emp_list"-->
+<!--app:layout_constraintTop_toTopOf="parent"-->
+<!--app:layout_constraintVertical_bias="0.419">-->
+
+<!--<AutoCompleteTextView-->
+<!--    android:id="@+id/dropdown_contents"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:layout_weight="1"-->
+<!--    android:backgroundTint="@color/white"-->
+<!--    android:inputType="none"-->
+<!--    android:outlineProvider="background"-->
+<!--    android:text="@string/defaultSalary"-->
+<!--    android:textColor="@color/black" />-->
+<!--</com.google.android.material.textfield.TextInputLayout>-->

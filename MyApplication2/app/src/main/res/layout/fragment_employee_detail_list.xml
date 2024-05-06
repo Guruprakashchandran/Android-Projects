@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+
+            name="filterItem"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F5F8"
+        tools:ignore="HardcodedText">
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
+            android:background="@drawable/corner"
+            android:clickable="true"
+            android:hint="@string/search_employee"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#787878"
+            android:textSize="14sp"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_marginEnd="30dp"
+            tools:textColorHint="@color/black" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/filterfloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Clicked"
+            android:src="@drawable/outline_filter_alt_24"
+            app:layout_constraintBottom_toTopOf="@+id/addFloatingButton"
+            app:layout_constraintEnd_toEndOf="@+id/addFloatingButton"
+            app:layout_constraintStart_toStartOf="@+id/addFloatingButton"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/redDot"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="17dp"
+            android:elevation="10dp"
+            android:visibility='@{ filterItem==null ? View.INVISIBLE : View.VISIBLE}'
+            app:layout_constraintEnd_toEndOf="@id/filterfloatingActionButton"
+            app:layout_constraintTop_toTopOf="@id/filterfloatingActionButton"
+            app:srcCompat="@drawable/circle" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addFloatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Clicked"
+            android:src="@drawable/outline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.896"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchBar"
+            app:layout_constraintVertical_bias="0.923" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+    <!--<com.google.android.material.textfield.TextInputLayout-->
+    <!--android:id="@+id/searchBarView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:boxStrokeColor="@color/black"-->
+    <!--app:boxStrokeWidth="2dp"-->
+    <!--app:hintEnabled="false"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/arrowBackIcon"-->
+    <!--app:layout_constraintStart_toStartOf="@id/arrowBackIcon"-->
+    <!--app:layout_constraintTop_toTopOf="@id/arrowBackIcon"-->
+
+
+    <!--    >-->
+
+    <!--<com.google.android.material.textfield.TextInputEditText-->
+    <!--    android:id="@+id/editTextSearch"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:hint="Search"-->
+    <!--    />-->
+
+    <!--</com.google.android.material.textfield.TextInputLayout>-->

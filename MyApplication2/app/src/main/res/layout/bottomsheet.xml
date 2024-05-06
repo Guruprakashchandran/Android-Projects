@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="check"
+            type="String" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:background="@drawable/bottom_sheet_corner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/all"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/underline" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_check_24"
+                    android:visibility='@{check == "Trainee" ? View.VISIBLE : View.INVISIBLE}'
+                    app:layout_constraintBottom_toBottomOf="@+id/trainee"
+                    app:layout_constraintEnd_toEndOf="@+id/trainee"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="@id/trainee"
+                    app:layout_constraintTop_toTopOf="@id/trainee"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:tint="#0CDE83" />
+
+                <TextView
+                    android:id="@+id/trainee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/trainee"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/all" />
+
+                <TextView
+                    android:id="@+id/bottom_sheet_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:text="@string/designation"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/underline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#8b8c8b"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bottom_sheet_title" />
+
+                <TextView
+                    android:id="@+id/employee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/employee"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/trainee" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_check_24"
+                    android:visibility='@{check == "Employee" ? View.VISIBLE : View.INVISIBLE}'
+                    app:layout_constraintBottom_toBottomOf="@+id/employee"
+                    app:layout_constraintEnd_toEndOf="@+id/employee"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="@id/employee"
+                    app:layout_constraintTop_toTopOf="@id/employee"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:tint="#0CDE83" />
+
+                <TextView
+                    android:id="@+id/team_lead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/team_leader"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/employee" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_check_24"
+                    android:visibility='@{check == "Team Leader" ? View.VISIBLE : View.INVISIBLE}'
+                    app:layout_constraintBottom_toBottomOf="@+id/team_lead"
+                    app:layout_constraintEnd_toEndOf="@+id/team_lead"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="@id/team_lead"
+                    app:layout_constraintTop_toTopOf="@id/team_lead"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:tint="#0CDE83" />
+
+                <TextView
+                    android:id="@+id/manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/manager"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/team_lead" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_check_24"
+                    android:visibility='@{check == "Manager" ? View.VISIBLE : View.INVISIBLE}'
+                    app:layout_constraintBottom_toBottomOf="@+id/manager"
+                    app:layout_constraintEnd_toEndOf="@+id/manager"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="@id/manager"
+                    app:layout_constraintTop_toTopOf="@id/manager"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:tint="#0CDE83" />
+                <TextView
+                    android:id="@+id/admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/admin"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/manager" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_check_24"
+                    android:visibility='@{check == "Super Admin" ? View.VISIBLE : View.INVISIBLE}'
+                    app:layout_constraintBottom_toBottomOf="@+id/super_admin"
+                    app:layout_constraintEnd_toEndOf="@+id/super_admin"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="@id/super_admin"
+                    app:layout_constraintTop_toTopOf="@id/super_admin"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:tint="#0CDE83" />
+                <TextView
+                    android:id="@+id/super_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/super_admin"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/admin" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--            </LinearLayout>-->
+        </FrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

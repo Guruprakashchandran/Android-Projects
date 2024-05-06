@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="my_first_fragment_set">My First Fragment Set</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="employee_list">Employee list</string>
+    <string name="employees">Employees</string>
+    <string name="plus_button">Plus Button</string>
+    <string name="employeeDetail">Employee Details</string>
+    <string name="label">Content</string>
+    <string name="employee_detail">Employee Detail</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="emailId">Email id</string>
+    <string name="mobileNo">Mobile no</string>
+    <string name="yearOfPassing">Experience</string>
+    <string name="experience">Experience</string>
+    <string name="salary">Salary</string>
+    <string name="yearOfExperience">%s years experience</string>
+    <string name="addButton">ADD</string>
+    <string name="employeeName">%s (id: %d)</string>
+    <string name="DeleteEmployeeDetail">Delete</string>
+    <string name="editEmployeeDetail">Edit</string>
+    <string name="imageLoading">Image Loading</string>
+    <string name="aboveLakh">100000+</string>
+    <string name="oneLakh">100000</string>
+    <string name="aboveFiftyThousand">50000+</string>
+    <string name="aboveTwentyThousand">20000+</string>
+    <string name="list">Choose</string>
+    <string name="salaryContent">Salary</string>
+    <string name="defaultSalary">0+</string>
+    <string name="zero">All</string>
+    <string name="all">All</string>
+    <string name="id">(id: %d)</string>
+    <string name="peopleimage">PeopleImage</string>
+    <string name = "_int">%d</string>
+    <string name="arrowbackbutton">ArrowBackButton</string>
+    <string name="search_employee">Search Employee</string>
+    <string name="mail_id">Mail id</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="mobile">Mobile</string>
+    <string name="department">Department</string>
+    <string name="employee_id">Employee ID</string>
+    <string name="desgination">Desgination</string>
+    <string name="about">About</string>
+    <string name="symbol">-</string>
+    <string name="updateContent">UPDATE</string>
+    <string name="choose_department">Choose Department</string>
+    <string name="choose_dob">Choose DOB</string>
+    <string name="emp_id">Emp ID</string>
+    <string name="gender">gender</string>
+    <string name="designation">Designation</string>
+    <string name="trainee">Trainee</string>
+    <string name="employee">Employee</string>
+    <string name="super_admin">Super Admin</string>
+    <string name="admin">Admin</string>
+    <string name="manager">Manager</string>
+    <string name="team_leader">Team Leader</string>
+    <string name="sample_text">Hello, [color_start]World![/color_start]</string>
+
+
+    <string-array name= "listItems">
+        <item>0+</item>
+        <item>20000+</item>
+        <item>50000+</item>
+        <item>100000+</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="departments">
+        <item>Jambav</item>
+        <item>CRM</item>
+        <item>Site 24*7</item>
+        <item>Trainer Central</item>
+        <item>People</item>
+        <item>Creater App</item>
+    </string-array>
+
+    <string-array name="designations">
+        <item>Trainee</item>
+        <item>Employee</item>
+        <item>Team Leader</item>
+        <item>Manager</item>
+        <item>Admin</item>
+        <item>Super Admin</item>
+    </string-array>
+
+</resources>

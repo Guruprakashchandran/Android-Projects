@@ -1,0 +1,39 @@
+CREATE TABLE EmployeeEntity (
+
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    address TEXT NOT NULL,
+    mail_id TEXT NOT NULL,
+    mobile_no INTEGER NOT NULL,
+    year_of_experience INTEGER NOT NULL,
+    salary INTEGER NOT NULL,
+    department TEXT NOT NULL,
+    designation TEXT NOT NULL,
+    employee_id TEXT NOT NULL,
+    date_of_birth TEXT NOT NULL,
+    gender TEXT NOT NULL
+);
+
+getEmployeeDetailById:
+SELECT * FROM EmployeeEntity WHERE id = :id;
+
+getAllEmployeeDetails:
+SELECT * FROM EmployeeEntity WHERE name LIKE '%'||:name||'%' AND ((:designation = "ALL" AND designation LIKE "%") OR (:designation != "ALL" AND designation LIKE :designation));
+
+deleteEmployeeById:
+DELETE FROM EmployeeEntity WHERE id = :id;
+
+addEmployeeDetail:
+INSERT OR REPLACE INTO EmployeeEntity (name, address, mail_id, mobile_no, year_of_experience, salary,department,designation,employee_id,date_of_birth,gender) VALUES (?,?,?,?,?,?,?,?,?,?,?);
+
+addEmployeeDetailWithId:
+INSERT INTO EmployeeEntity(id,name,address,mail_id,mobile_no,year_of_experience,salary,department,designation,employee_id,date_of_birth,gender) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);
+
+updateEmployeeDetail:
+UPDATE EmployeeEntity SET name = ?,address = ?,mail_id = ?,mobile_no = ?,year_of_experience = ?,salary = ?,department = ?,designation = ?,employee_id = ?,date_of_birth = ?,gender = ? WHERE id = ?;
+
+getAllEmployeeDetailsByDesignation:
+SELECT * FROM EmployeeEntity WHERE designation = :designation AND name LIKE '%'||:name||'%';
+
+-- filterAllEmployeeDetailsByDesignation:
+-- SELECT * FROM EmployeeEntity WHERE

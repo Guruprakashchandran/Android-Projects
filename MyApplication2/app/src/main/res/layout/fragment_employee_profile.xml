@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.example.myapplication.view.EmployeeProfileFragment"/>
+        <variable
+            name="employee"
+            type="com.example.myapplication.model.Employee" />
+    </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:transitionName="shared_image"
+            android:contentDescription="@string/peopleimage"
+            android:scaleType="centerCrop"
+            android:src="@drawable/people2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/empNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@{employee.name}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/profileImage"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage"
+            tools:text="Guruprakash C" />
+
+        <TextView
+            android:id="@+id/empEmailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:textColor="#787878"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/empNameText"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/empNameText"
+            app:layout_constraintTop_toBottomOf="@+id/empNameText"
+            tools:text="guruprakash0107@gmail.com"
+            android:text="@{employee.emailId}"/>
+
+        <TextView
+            android:id="@+id/aboutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/about"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/empEmailText"
+            app:layout_constraintHorizontal_bias="0.124"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empEmailText" />
+
+        <TextView
+            android:id="@+id/designationTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/desgination"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/aboutText"
+            app:layout_constraintTop_toBottomOf="@+id/aboutText" />
+
+        <TextView
+            android:id="@+id/designationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/designationTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/designationTitleText"
+            tools:text="Trainee"
+            android:text="@{employee.designation}"/>
+
+        <TextView
+            android:id="@+id/employeeIdTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/employee_id"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/designationText"
+            app:layout_constraintTop_toBottomOf="@+id/designationText" />
+
+        <TextView
+            android:id="@+id/employeeIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/employeeIdTitleText"
+            app:layout_constraintTop_toBottomOf="@id/employeeIdTitleText"
+            tools:text="TS-257"
+            android:text="@{employee.employeeId}"/>
+
+        <TextView
+            android:id="@+id/departmentTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/department"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/employeeIdText"
+            app:layout_constraintTop_toBottomOf="@+id/employeeIdText" />
+
+        <TextView
+            android:id="@+id/departmentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/departmentTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/departmentTitleText"
+            tools:text="Jambav"
+            android:text="@{employee.department}"/>
+
+        <TextView
+            android:id="@+id/mobileNoTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/mobile"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/departmentText"
+            app:layout_constraintTop_toBottomOf="@+id/departmentText" />
+
+        <TextView
+            android:id="@+id/mobileNoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/mobileNoTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNoTitleText"
+            tools:text="9384348641"
+            android:text="@{String.valueOf(employee.mobileNo)}"
+            />
+
+
+        <TextView
+            android:id="@+id/emailIdTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/mail_id"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/mobileNoText"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNoText"
+            tools:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/emailIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/emailIdTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/emailIdTitleText"
+            tools:text="guruprakash0107@gmail.com"
+            android:text="@{employee.emailId}"/>
+
+        <TextView
+            android:id="@+id/genderTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/gender"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/emailIdText"
+            app:layout_constraintTop_toBottomOf="@+id/emailIdText" />
+
+        <TextView
+            android:id="@+id/genderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@{employee.gender}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/genderTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/genderTitleText"
+            tools:text="male" />
+        <TextView
+            android:id="@+id/dateOfBirthTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/date_of_birth"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/genderText"
+            app:layout_constraintTop_toBottomOf="@+id/genderText" />
+
+
+        <TextView
+            android:id="@+id/dateOfBirthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@{employee.dateOfBirth}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/dateOfBirthTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/dateOfBirthTitleText"
+            tools:text="01-07-2002" />
+
+        <TextView
+            android:id="@+id/salaryTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/salary"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/dateOfBirthText"
+            app:layout_constraintTop_toBottomOf="@+id/dateOfBirthText" />
+
+        <TextView
+            android:id="@+id/salaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@{String.valueOf(employee.salary)}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingBottom="20dp"
+            app:layout_constraintStart_toStartOf="@+id/salaryTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/salaryTitleText"
+            tools:text="100000" />
+
+        <ImageButton
+            android:id="@+id/profileCancelButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/cancel_button_corner"
+            android:backgroundTint="@color/white"
+            android:contentDescription="TODO"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="@id/profileImage"
+            app:layout_constraintTop_toTopOf="@id/profileImage"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="@color/black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</layout>

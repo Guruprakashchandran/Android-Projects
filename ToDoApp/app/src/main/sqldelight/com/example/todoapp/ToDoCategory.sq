@@ -1,0 +1,13 @@
+CREATE TABLE ToDoCategory (
+
+   category TEXT PRIMARY KEY
+);
+
+addCategory:
+INSERT INTO ToDoCategory (category)VALUES (?);
+
+deleteCategory:
+DELETE FROM ToDoCategory WHERE category = :category;
+
+getAllCategories:
+SELECT * FROM ToDoCategory;

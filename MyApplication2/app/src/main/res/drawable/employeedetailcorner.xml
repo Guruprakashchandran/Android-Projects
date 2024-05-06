@@ -1,0 +1,6 @@
+<!-- rounded_corners.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="100dp" /> <!-- Adjust the radius to change the corner curvature --><!-- Optional: Set a solid color -->
+    <!-- You can also set a stroke here if you want -->
+</shape>
